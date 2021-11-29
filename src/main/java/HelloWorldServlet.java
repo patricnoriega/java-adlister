@@ -8,12 +8,20 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+    private int hitCount;
 
+    public void init() {
+        hitCount = 0;
+    }
+
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         res.setContentType("text/html");
         String nameQuery = req.getParameter("name");
         String searchQuery = req.getParameter("q");
+        String title = "Total Number of Hits";
+        String count = req.getParameter("count");
         PrintWriter out = res.getWriter();
+        hitCount++;
 
         if (nameQuery != null) {
             out.println("<h1>Hello, " + nameQuery + "!</h1>");
@@ -26,6 +34,9 @@ public class HelloWorldServlet extends HttpServlet {
         if (searchQuery != null) {
             out.println("<p>Here are your results for " + searchQuery + "</p>");
         }
+        out.println(
+                        "<h2 align = \"center\">" + title + "</h2>\n" +
+                        "<h3 align = \"center\">" + hitCount + "</h3>\n");
     }
 }
 
