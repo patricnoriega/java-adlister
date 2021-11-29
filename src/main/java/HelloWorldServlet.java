@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
+
 
 @WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
@@ -18,9 +18,11 @@ public class HelloWorldServlet extends HttpServlet {
         if (nameQuery != null) {
             out.println("<h1>Hello, " + nameQuery + "!</h1>");
         }
+
         if (nameQuery == null) {
             out.println("<h1>Hello, World!</h1>");
         }
+
         if (searchQuery != null) {
             out.println("<p>Here are your results for " + searchQuery + "</p>");
         }
