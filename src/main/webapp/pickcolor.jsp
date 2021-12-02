@@ -8,9 +8,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Color Picker</title>
 </head>
 <body>
+<h1>What is your Favorite color?</h1>
 
+<form method="POST">
+    <div>
+        <label>Input Color</label>
+        <input type="text"  name="color" placeholder="black">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 </body>
 </html>
