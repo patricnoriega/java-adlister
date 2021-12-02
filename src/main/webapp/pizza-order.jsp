@@ -12,38 +12,61 @@
 </head>
 <body>
 <h1>Pat's Pizza</h1>
-<form method="post">
-<select class="custom-select">
-    <option selected>Select Crust</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-</select>
-    <select class="custom-select">
+<form method="POST">
+    <h3>Choose Your Crust</h3>
+    <label for="crust-select">Crust Type</label>
+    <select name="crust-select" id="crust-select">
+        <option selected>Select Crust</option>
+        <option value="hand-tossed">Hand Tossed</option>
+        <option value="pan-pizza">Pan Pizza</option>
+        <option value="deep-dish">Deep Dish</option>
+    </select>
+    <br>
+
+    <h3>Choose Your Sauce</h3>
+    <label for="sauce-select">Sauce Type</label>
+    <select name="sauce-select" id="sauce-select">
         <option selected>Select Sauce</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="red">Red</option>
+        <option value="white">White</option>
+        <option value="none">None</option>
     </select>
-    <select class="custom-select">
+    <br>
+
+
+    <h3>Choose Your Size</h3>
+    <label for="size-select">Size Type</label>
+    <select name="size-select" id="size-select">
         <option selected>Select Size</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
     </select>
-<div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="customCheck1">
-    <label class="custom-control-label" for="customCheck1">Choose Your Toppings</label>
-</div>
-    <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="customCheck2">
-        <label class="custom-control-label" for="customCheck1">Choose Your Toppings</label>
+    <br>
+
+
+    <h3>Choose Your Toppings</h3>
+    <div>
+        <label for="pepperoni">Pepperoni</label>
+        <input type="checkbox" value="pepperoni" id="pepperoni" name="toppings">
     </div>
-    <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="customCheck3">
-        <label class="custom-control-label" for="customCheck1">Choose Your Toppings</label>
+    <div>
+        <label for="mushroom">Mushroom</label>
+        <input type="checkbox" value="mushroom" id="mushroom" name="toppings">
     </div>
+    <div>
+        <label for="Sausage">Sausage</label>
+        <input type="checkbox" value="Sausage" id="Sausage" name="toppings">
+    </div>
+
+    <h3>Delivery Address</h3>
+    <div>
+        <label for="address">Address</label>
+        <input type="text" value="address" id="address" name="address" placeholder="1234 Main St">
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-<button type="submit" class="btn btn-primary">Submit</button>
 </body>
 </html>
