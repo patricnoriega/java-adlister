@@ -14,6 +14,6 @@ import java.io.IOException;
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             String guess = request.getParameter("guess");
             request.setAttribute("guess", guess);
-            response.sendRedirect();
+//            response.sendRedirect();
         }
 }
