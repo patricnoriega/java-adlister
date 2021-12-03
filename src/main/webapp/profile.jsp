@@ -7,7 +7,9 @@
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
-
+<c:if test="${adminView}">
+    <div>This is for admin view only</div>
+</c:if>
     <div class="container">
         <h1>Viewing your profile.</h1>
     </div>
