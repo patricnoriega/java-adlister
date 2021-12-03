@@ -4,12 +4,13 @@ import java.util.List;
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
 
-    public List<Ad> all() {
-        if (ads == null) {
-            ads = generateAds();
-        }
-        return ads;
+    public ListAdsDao(){
+        this.ads = generateAds();
     }
+    public List<Ad> all(){
+        return this.ads;
+    }
+
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
@@ -38,5 +39,15 @@ public class ListAdsDao implements Ads {
             "Must have strong Java skills"
         ));
         return ads;
+    }
+
+    @Override
+    public void insert(Ad ad) {
+        this.ads.add(ad);
+    }
+
+    @Override
+    public void destroy(Ad ad) {
+        this.ads.remove(ad);
     }
 }
