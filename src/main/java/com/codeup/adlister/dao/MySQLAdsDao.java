@@ -1,5 +1,6 @@
 package com.codeup.adlister.dao;
 
+import com.codeup.adlister.Config;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
@@ -37,6 +38,15 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
+//        public List<Ad> all() {
+//            Statement stmt = null;
+//            try {
+//                stmt = connection.prepareStatement();
+//                ResultSet rs = stmt.executeQuery()
+//            }
+//            }
+
+
 
     @Override
     public Long insert(Ad ad) {
